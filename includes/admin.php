@@ -3,21 +3,99 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 add_action( 'admin_enqueue_scripts', 'quotum_admin_styles' );
+
 function quotum_admin_styles( $hook_suffix ) {
-    if ( 'toplevel_page_quotum' !== $hook_suffix ) { return; }
-    wp_enqueue_style( 'quotum-admin', QUOTUM_PLUGIN_URL . 'assets/quotum-admin.css', array(), QUOTUM_VERSION );
-    wp_enqueue_script( 'quotum-admin-bulk', QUOTUM_PLUGIN_URL . 'assets/quotum-admin-bulk.js', array(), QUOTUM_VERSION, true );
-    wp_localize_script( 'quotum-admin-bulk', 'quotumAdminI18n', array(
-        'chooseAction'       => __( 'Please choose a bulk action.', 'quotum' ),
-        'selectQuotation'    => __( 'Please select at least one quotation.', 'quotum' ),
-        // translators: %1$d is the number of selected quotations; %2$s is the plural suffix.
-        'deleteQuestion'     => __( 'Permanently delete %1$d selected quotation%2$s?\n\nThis cannot be undone.', 'quotum' ),
-        // translators: %1$d is the number of selected quotations; %2$s is the plural suffix.
-        'activateQuestion'   => __( 'Activate %1$d selected quotation%2$s?', 'quotum' ),
-        // translators: %1$d is the number of selected quotations; %2$s is the plural suffix.
-        'deactivateQuestion' => __( 'Deactivate %1$d selected quotation%2$s?', 'quotum' ),
-    ) );
-    wp_enqueue_script( 'quotum-admin-preview', QUOTUM_PLUGIN_URL . 'assets/quotum-admin-preview.js', array(), QUOTUM_VERSION, true );
+
+    if ( 'toplevel_page_quotum' !== $hook_suffix ) {
+        return;
+    }
+
+    wp_enqueue_style(
+        'quotum-admin',
+        QUOTUM_PLUGIN_URL . 'assets/quotum-admin.css',
+        array(),
+                     QUOTUM_VERSION
+    );
+
+    wp_enqueue_script(
+        'quotum-admin-bulk',
+        QUOTUM_PLUGIN_URL . 'assets/quotum-admin-bulk.js',
+        array(),
+                      QUOTUM_VERSION,
+                      true
+    );
+
+    wp_localize_script(
+        'quotum-admin-bulk',
+        'quotumAdminI18n',
+        array(
+            'chooseAction' => __(
+                'Please choose a bulk action.',
+                'quotum'
+            ),
+
+            'selectQuotation' => __(
+                'Please select at least one quotation.',
+                'quotum'
+            ),
+
+            // translators: %1$d is the number of selected quotations.
+            'deleteQuestionSingular' => _n(
+                "Permanently delete %1\$d selected quotation?\n\nThis cannot be undone.",
+                "Permanently delete %1\$d selected quotations?\n\nThis cannot be undone.",
+                1,
+                'quotum'
+            ),
+
+            // translators: %1$d is the number of selected quotations.
+            'deleteQuestionPlural' => _n(
+                "Permanently delete %1\$d selected quotation?\n\nThis cannot be undone.",
+                "Permanently delete %1\$d selected quotations?\n\nThis cannot be undone.",
+                2,
+                'quotum'
+            ),
+
+            // translators: %1$d is the number of selected quotations.
+            'activateQuestionSingular' => _n(
+                'Activate %1$d selected quotation?',
+                'Activate %1$d selected quotations?',
+                1,
+                'quotum'
+            ),
+
+            // translators: %1$d is the number of selected quotations.
+            'activateQuestionPlural' => _n(
+                'Activate %1$d selected quotation?',
+                'Activate %1$d selected quotations?',
+                2,
+                'quotum'
+            ),
+
+            // translators: %1$d is the number of selected quotations.
+            'deactivateQuestionSingular' => _n(
+                'Deactivate %1$d selected quotation?',
+                'Deactivate %1$d selected quotations?',
+                1,
+                'quotum'
+            ),
+
+            // translators: %1$d is the number of selected quotations.
+            'deactivateQuestionPlural' => _n(
+                'Deactivate %1$d selected quotation?',
+                'Deactivate %1$d selected quotations?',
+                2,
+                'quotum'
+            ),
+        )
+    );
+
+    wp_enqueue_script(
+        'quotum-admin-preview',
+        QUOTUM_PLUGIN_URL . 'assets/quotum-admin-preview.js',
+        array(),
+                      QUOTUM_VERSION,
+                      true
+    );
 }
 
 
@@ -795,7 +873,7 @@ function quotum_admin_page() {
         echo '<p>' . esc_html__( 'No quotations found.', 'quotum' ) . '</p>';
     } else {
         // Bulk action form is separate from row-level delete forms.
-        echo '<form id="quotum-bulk-form" method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" onsubmit="return quotumConfirmBulkAction(this);">';
+        echo '<form id="quotum-bulk-form" method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
         echo '<input type="hidden" name="action" value="quotum_bulk_status">';
         wp_nonce_field( 'quotum_bulk_status' );
         echo '<input type="hidden" name="s" value="' . esc_attr( $search ) . '">';

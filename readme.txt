@@ -4,7 +4,7 @@ Tags: quotations, quotes, shortcode, widget, csv
 Requires at least: 6.2
 Requires PHP: 8.0
 Tested up to: 7.1
-Stable tag: 0.7.4
+Stable tag: 0.7.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -154,6 +154,10 @@ The plugin does not collect analytics or tracking data.
 Administrative actions require the appropriate WordPress capability and nonce verification. User-supplied values are sanitized and database operations use WordPress database APIs.
 
 == Changelog ==
+
+= 0.7.5 =
+* Fix bulk-action confirmation handling and prevent duplicate confirmation dialogs.
+* Improve translated singular and plural bulk-action messages.
 
 = 0.7.4 =
 * Remove obsolete manual translation loading for WordPress.org distribution.

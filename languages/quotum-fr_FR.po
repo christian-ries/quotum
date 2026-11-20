@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quotum 0.7.4\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-18 13:24+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-20 15:20+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,132 +13,151 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: includes/import-export.php:457
+#. translators: %1$d is the number of duplicate quotations skipped.
+#: includes/import-export.php:452
+#, php-format
 msgid "%1$d duplicate was skipped."
-msgstr "%1$d doublon ignoré."
+msgid_plural "%1$d duplicates were skipped."
+msgstr[0] "%1$d doublon ignoré."
+msgstr[1] "%1$d doublons ignorés."
 
-#: includes/import-export.php:462
+#. translators: %1$d is the number of errors encountered.
+#: includes/import-export.php:457
+#, php-format
 msgid "%1$d error occurred."
-msgstr "%1$d erreur s’est produite."
+msgid_plural "%1$d errors occurred."
+msgstr[0] "%1$d erreur s’est produite."
+msgstr[1] "%1$d erreurs se sont produites."
 
-#: includes/import-export.php:459
+#. translators: %1$d is the number of invalid or empty rows skipped.
+#: includes/import-export.php:454
+#, php-format
 msgid "%1$d invalid or empty row was skipped."
-msgstr "%1$d ligne invalide ou vide ignorée."
+msgid_plural "%1$d invalid or empty rows were skipped."
+msgstr[0] "%1$d ligne invalide ou vide ignorée."
+msgstr[1] "%1$d lignes invalides ou vides ignorées."
 
-#: includes/import-export.php includes/import-export.php:455
+#. translators: %1$d is the number of imported quotations; %2$s is an optional status suffix.
+#: includes/import-export.php:450
+#, php-format
 msgid "%1$d quotation imported successfully%2$s."
-msgstr "%1$d citation importée avec succès%2$s."
+msgid_plural "%1$d quotations imported successfully%2$s."
+msgstr[0] "%1$d citation importée avec succès%2$s."
+msgstr[1] "%1$d citations importées avec succès%2$s."
 
-#: includes/import-export.php
-msgid "%1$d quotations imported successfully%2$s."
-msgstr "%1$d citations importées avec succès%2$s."
-
-#: includes/import-export.php:334
+#: includes/import-export.php:336
 msgid ": "
 msgstr " : "
 
-#: includes/admin.php:800
+#: includes/admin.php:902
 msgid "Actions"
 msgstr "Actions"
 
-#: includes/admin.php:784
+#: includes/admin.php:886
 msgid "Activate"
 msgstr "Activer"
 
-#: includes/admin.php:859
-msgid "Activate %1$d selected quotation%2$s?"
-msgstr "Activer %1$d citation(s)%2$s sélectionnée(s) ?"
+#: includes/admin.php:60 includes/admin.php:68
+#, php-format
+msgid "Activate %1$d selected quotation?"
+msgid_plural "Activate %1$d selected quotations?"
+msgstr[0] "Activer %1$d citation sélectionnée ?"
+msgstr[1] "Activer %1$d citations sélectionnées ?"
 
-#: includes/admin.php:753 includes/admin.php:813
+#: includes/admin.php:855 includes/admin.php:915
 msgid "Active"
 msgstr "Actif"
 
-#: includes/admin.php:1118
+#: includes/admin.php:1132
 msgid "Active (available for public display)"
 msgstr "Actif (visible publiquement)"
 
-#: includes/admin.php:703 includes/admin.php:1071
+#: includes/admin.php:805 includes/admin.php:1085
 msgid "Add New Quotation"
 msgstr "Ajouter une citation"
 
-#: includes/admin.php:1132
+#: includes/admin.php:1146
 msgid "Add Quotation"
 msgstr "Ajouter la citation"
 
-#: includes/admin.php:752
+#: includes/admin.php:854
 msgid "All statuses"
 msgstr "Tous les statuts"
 
-#: includes/admin.php:741
+#: includes/admin.php:843
 msgid "All tags"
 msgstr "Toutes les étiquettes"
 
-#: includes/admin.php:788
+#: includes/admin.php:890
 msgid "Apply"
 msgstr "Appliquer"
 
-#: includes/admin.php:757
+#: includes/admin.php:859
 msgid "Apply filters"
 msgstr "Appliquer les filtres"
 
-#: includes/import-export.php:449
-msgid "as active"
-msgstr "comme actives"
-
-#: includes/import-export.php:451
-msgid "as inactive"
-msgstr "comme inactives"
-
-#: includes/admin.php:796 includes/admin.php:1090
+#: includes/admin.php:898 includes/admin.php:1104
 msgid "Author"
 msgstr "Auteur"
 
-#: includes/admin.php:783
+#: includes/admin.php:885
 msgid "Bulk actions"
 msgstr "Actions groupées"
 
-#: includes/admin.php:1134
+#: includes/admin.php:1148
 msgid "Cancel"
 msgstr "Annuler"
 
-#: includes/admin.php:760
+#: includes/import-export.php:509
+msgid ""
+"Choose whether imported quotations start inactive, retain their CSV status, "
+"or become active."
+msgstr ""
+"Choisissez si les citations importées doivent être désactivées, conserver "
+"leur statut indiqué dans le fichier CSV ou être activées."
+
+#: includes/admin.php:862
 msgid "Clear filters"
 msgstr "Effacer les filtres"
 
-#: includes/import-export.php:266
+#: includes/import-export.php:268
 msgid "Database error while checking for duplicates: "
 msgstr "Erreur de base de données lors de la recherche de doublons : "
 
-#: includes/import-export.php:334
+#: includes/import-export.php:336
 msgid "Database error while importing line "
 msgstr "Erreur de base de données lors de l’importation de la ligne "
 
-#: includes/admin.php:107 includes/admin.php:119 includes/admin.php:164
-#: includes/admin.php:226 includes/import-export.php:29
+#: includes/import-export.php:29 includes/admin.php:206 includes/admin.php:218
+#: includes/admin.php:263 includes/admin.php:325 includes/admin.php:434
+#: includes/admin.php:513
 msgid "Database error: "
 msgstr "Erreur de base de données : "
 
-#: includes/admin.php:509
+#: includes/admin.php:608
 msgid "Database table not found."
 msgstr "Table de base de données introuvable."
 
-#: includes/admin.php:785
+#: includes/admin.php:887
 msgid "Deactivate"
 msgstr "Désactiver"
 
-#: includes/admin.php:864
-msgid "Deactivate %1$d selected quotation%2$s?"
-msgstr "Désactiver %1$d citation(s)%2$s sélectionnée(s) ?"
+#: includes/admin.php:76 includes/admin.php:84
+#, php-format
+msgid "Deactivate %1$d selected quotation?"
+msgid_plural "Deactivate %1$d selected quotations?"
+msgstr[0] "Désactiver %1$d citation sélectionnée ?"
+msgstr[1] "Désactiver %1$d citations sélectionnées ?"
 
-#: includes/admin.php:834
+#: includes/admin.php:936
 msgid "Delete"
 msgstr "Supprimer"
 
-#: includes/admin.php:786
+#: includes/admin.php:888
 msgid "Delete permanently"
 msgstr "Supprimer définitivement"
 
-#: includes/admin.php:827
+#: includes/admin.php:929
 msgid "Delete this quotation permanently?"
 msgstr "Supprimer définitivement cette citation ?"
 
@@ -146,19 +165,23 @@ msgstr "Supprimer définitivement cette citation ?"
 msgid "Displays random quotations from Quotum."
 msgstr "Affiche des citations aléatoires de Quotum."
 
-#: includes/admin.php:825
+#: includes/admin.php:927
 msgid "Edit"
 msgstr "Modifier"
 
-#: includes/admin.php:1071
+#: includes/admin.php:1085
 msgid "Edit Quotation"
 msgstr "Modifier la citation"
 
-#: includes/import-export.php:471
+#: includes/import-export.php:485
 msgid "Export"
 msgstr "Exportation"
 
-#: includes/import-export.php:472
+#: includes/import-export.php:490
+msgid "Export Quotations"
+msgstr "Exporter les citations"
+
+#: includes/import-export.php:486
 msgid ""
 "Export all quotations to a UTF-8 CSV file. The export contains the quote, "
 "author, source, tags and active status."
@@ -166,44 +189,40 @@ msgstr ""
 "Exporter toutes les citations dans un fichier CSV UTF-8 contenant la "
 "citation, l’auteur, la source, les étiquettes et le statut actif."
 
-#: includes/import-export.php:476
-msgid "Export Quotations"
-msgstr "Exporter les citations"
-
-#: includes/import-export.php:481
+#: includes/import-export.php:495
 msgid "Import"
 msgstr "Importation"
 
-#: includes/import-export.php:468
-msgid "Import aborted:"
-msgstr "Importation interrompue :"
-
-#: includes/import-export.php:493
-msgid "Import all as Active"
-msgstr "Tout importer comme actif"
-
-#: includes/import-export.php:491
-msgid "Import all as Inactive (default)"
-msgstr "Tout importer comme inactif (par défaut)"
-
-#: includes/import-export.php:496
+#: includes/import-export.php:511
 msgid "Import Quotations"
 msgstr "Importer les citations"
 
 #: includes/import-export.php:482
+msgid "Import aborted:"
+msgstr "Importation interrompue :"
+
+#: includes/import-export.php:507
+msgid "Import all as Active"
+msgstr "Tout importer comme actif"
+
+#: includes/import-export.php:505
+msgid "Import all as Inactive (default)"
+msgstr "Tout importer comme inactif (par défaut)"
+
+#: includes/import-export.php:496
 msgid "Import quotations from a CSV file previously exported by Quotum."
 msgstr ""
 "Importer des citations depuis un fichier CSV précédemment exporté par Quotum."
 
-#: includes/import-export.php:409 includes/import-export.php:505
+#: includes/import-export.php:411 includes/import-export.php:520
 msgid "Import sample quotations"
 msgstr "Importer les exemples de citations"
 
-#: includes/import-export.php:489
+#: includes/import-export.php:503
 msgid "Import status:"
 msgstr "Statut de l’importation :"
 
-#: includes/import-export.php:501
+#: includes/import-export.php:516
 msgid ""
 "Import three optional example quotations as inactive from the bundled CSV. "
 "Existing quotations are preserved and duplicates are skipped."
@@ -212,11 +231,11 @@ msgstr ""
 "fichier CSV fourni. Les citations existantes sont conservées et les doublons "
 "sont ignorés."
 
-#: includes/import-export.php:483
+#: includes/import-export.php:497
 msgid "Important:"
 msgstr "Important :"
 
-#: includes/import-export.php:483
+#: includes/import-export.php:497
 msgid ""
 "Importing is additive. Existing quotations are not deleted or modified. "
 "Quotations with the same Quote + Author are skipped as duplicates. Duplicate "
@@ -227,11 +246,11 @@ msgstr ""
 "ignorées comme doublons. La détection des doublons ne tient compte ni de la "
 "casse ni des différences d’espacement."
 
-#: includes/admin.php:754 includes/admin.php:813
+#: includes/admin.php:856 includes/admin.php:915
 msgid "Inactive"
 msgstr "Inactif"
 
-#: includes/import-export.php:468
+#: includes/import-export.php:482
 msgid ""
 "Invalid CSV format. Expected the columns: Quote, Author, Source, Tags, "
 "Active. Please use a CSV exported by Quotum."
@@ -239,23 +258,27 @@ msgstr ""
 "Format CSV non valide. Colonnes attendues : Citation, Auteur, Source, Tags, "
 "Active. Veuillez utiliser un fichier CSV exporté par Quotum."
 
-#: includes/import-export.php:369
+#: includes/import-export.php:371
 msgid "Invalid sample CSV header."
 msgstr "En-tête CSV du fichier d’exemple non valide."
 
-#: includes/import-export.php:492
+#: includes/import-export.php:506
 msgid "Keep status from CSV"
 msgstr "Conserver le statut du CSV"
 
-#: includes/admin.php:1124
+#: includes/admin.php:1138
 msgid "Live Preview"
 msgstr "Aperçu en direct"
+
+#: includes/admin.php:120 includes/admin.php:121 includes/admin.php:605
+msgid "Manage Quotes"
+msgstr "Gérer les citations"
 
 #: includes/widget.php:192
 msgid "Next Quote link text:"
 msgstr "Texte du lien vers la citation suivante :"
 
-#: includes/functions.php:162 includes/widget.php:38 includes/widget.php:101
+#: includes/widget.php:38 includes/widget.php:101 includes/functions.php:162
 msgid "Next quote »"
 msgstr "Citation suivante »"
 
@@ -263,19 +286,19 @@ msgstr "Citation suivante »"
 msgid "No quotations available."
 msgstr "Aucune citation disponible."
 
-#: includes/admin.php:771
+#: includes/admin.php:873
 msgid "No quotations found."
 msgstr "Aucune citation trouvée."
 
-#: includes/admin.php:369
+#: includes/admin.php:468
 msgid "No tag was specified."
 msgstr "Aucune étiquette indiquée."
 
-#: includes/admin.php:970
+#: includes/admin.php:984
 msgid "No tags are currently assigned to quotations."
 msgstr "Aucune étiquette n’est actuellement attribuée aux citations."
 
-#: includes/import-export.php:413
+#: includes/import-export.php:415
 msgid "No thanks"
 msgstr "Non merci"
 
@@ -283,35 +306,44 @@ msgstr "Non merci"
 msgid "Number of quotations:"
 msgstr "Nombre de citations :"
 
-#: includes/admin.php:854
+#: includes/admin.php:44 includes/admin.php:52
+#, php-format
 msgid ""
-"Permanently delete %1$d selected quotation%2$s?\n"
+"Permanently delete %1$d selected quotation?\n"
 "\n"
 "This cannot be undone."
-msgstr ""
-"Supprimer définitivement %1$d citation(s)%2$s sélectionnée(s) ?\n"
+msgid_plural ""
+"Permanently delete %1$d selected quotations?\n"
+"\n"
+"This cannot be undone."
+msgstr[0] ""
+"Supprimer définitivement %1$d citation sélectionnée ?\n"
+"\n"
+"Cette action est irréversible."
+msgstr[1] ""
+"Supprimer définitivement %1$d citations sélectionnées ?\n"
 "\n"
 "Cette action est irréversible."
 
-#: includes/admin.php:850
-msgid "Please choose a bulk action."
-msgstr "Veuillez choisir une action groupée."
-
-#: includes/import-export.php:466
+#: includes/import-export.php:480
 msgid "Please choose a CSV file to import."
 msgstr "Veuillez choisir un fichier CSV à importer."
 
-#: includes/admin.php:198
+#: includes/admin.php:33
+msgid "Please choose a bulk action."
+msgstr "Veuillez choisir une action groupée."
+
+#: includes/admin.php:297
 msgid "Please choose a valid bulk action."
 msgstr "Veuillez choisir une action groupée valide."
 
-#: includes/admin.php:274
+#: includes/admin.php:373
 msgid "Please provide a valid tag name. Tags cannot contain commas."
 msgstr ""
 "Veuillez saisir une étiquette valide. Les étiquettes ne peuvent pas contenir "
 "de virgules."
 
-#: includes/admin.php:206 includes/admin.php:851
+#: includes/admin.php:38 includes/admin.php:305
 msgid "Please select at least one quotation."
 msgstr "Veuillez sélectionner au moins une citation."
 
@@ -319,117 +351,118 @@ msgstr "Veuillez sélectionner au moins une citation."
 msgid "Quotation"
 msgstr "Citation"
 
-#: includes/admin.php:516
+#: includes/admin.php:615
 msgid "Quotation added successfully."
 msgstr "Citation ajoutée avec succès."
 
-#: includes/admin.php:518
+#: includes/admin.php:617
 msgid "Quotation deleted."
 msgstr "Citation supprimée."
 
-#: includes/admin.php:97 includes/admin.php:1042
+#: includes/admin.php:196 includes/admin.php:1056
 msgid "Quotation not found."
 msgstr "Citation introuvable."
 
-#: includes/admin.php:517
+#: includes/admin.php:616
 msgid "Quotation updated successfully."
 msgstr "Citation mise à jour avec succès."
 
-#: includes/admin.php:976
+#: includes/admin.php:990
 msgid "Quotations"
 msgstr "Citations"
 
-#: includes/admin.php:765
+#: includes/admin.php:867
 msgid "Quotations found:"
 msgstr "Citations trouvées :"
 
-#: includes/admin.php:795 includes/admin.php:1083
+#: includes/admin.php:897 includes/admin.php:1097
 msgid "Quote"
 msgstr "Citation"
 
-#: includes/admin.php:506 includes/widget.php:17
+#: includes/widget.php:17 includes/admin.php:605
 msgid "Quotum"
 msgstr "Quotum"
 
-#: includes/import-export.php:430
+#: includes/import-export.php:476
 msgid "Quotum — Export / Import"
 msgstr "Quotum — Export / Import"
 
-#: includes/admin.php:978 includes/admin.php:1003
+#: includes/admin.php:992 includes/admin.php:1017
 msgid "Remove"
 msgstr "Retirer"
 
-#: includes/admin.php:999
+#: includes/admin.php:1013
 msgid "Remove this tag from all quotations?"
 msgstr "Retirer cette étiquette de toutes les citations ?"
 
-#: includes/admin.php:994
+#: includes/admin.php:1008
 msgid "Rename"
 msgstr "Renommer"
 
-#: includes/admin.php:977
+#: includes/admin.php:991
 msgid "Rename tag"
 msgstr "Renommer l’étiquette"
 
-#: includes/import-export.php:500
+#: includes/import-export.php:515
 msgid "Sample quotations"
 msgstr "Exemples de citations"
 
-#: includes/import-export.php:360
+#: includes/import-export.php:362
 msgid "Sample quotations file could not be read."
 msgstr "Impossible de lire le fichier des exemples de citations."
 
-#: includes/import-export.php:365
+#: includes/import-export.php:367
 msgid "Sample quotations file is empty."
 msgstr "Le fichier des exemples de citations est vide."
 
-#: includes/admin.php:1132
+#: includes/admin.php:1146
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
-#: includes/admin.php:738
+#: includes/admin.php:840
 msgid "Search quotations, authors, sources and tags"
 msgstr "Rechercher dans les citations, auteurs, sources et étiquettes"
 
-#: includes/admin.php:793
+#: includes/admin.php:895
 msgid "Select all quotations on this page"
 msgstr "Sélectionner toutes les citations de cette page"
 
-#: includes/admin.php:781
+#: includes/admin.php:883
 msgid "Select bulk action"
 msgstr "Choisir une action groupée"
 
-#: includes/admin.php:807
-#, python-format
+#. translators: %d is the quotation ID.
+#: includes/admin.php:909
+#, php-format
 msgid "Select quotation %d"
 msgstr "Sélectionner la citation %d"
 
-#: includes/admin.php:521
+#: includes/admin.php:620
 msgid "Selected quotations activated."
 msgstr "Citations sélectionnées activées."
 
-#: includes/admin.php:522
+#: includes/admin.php:621
 msgid "Selected quotations deactivated."
 msgstr "Citations sélectionnées désactivées."
 
-#: includes/admin.php:523
+#: includes/admin.php:622
 msgid "Selected quotations permanently deleted."
 msgstr "Citations sélectionnées supprimées définitivement."
 
-#: includes/admin.php:1113
+#: includes/admin.php:1127
 msgid ""
 "Separate multiple tags with commas. Existing tags are suggested while typing."
 msgstr ""
 "Séparez les étiquettes par des virgules. Les étiquettes existantes sont "
 "suggérées pendant la saisie."
 
-#: includes/widget.php:154
-msgid "Show author"
-msgstr "Afficher l’auteur"
-
 #: includes/widget.php:189
 msgid "Show Next Quote link"
 msgstr "Afficher le lien vers la citation suivante"
+
+#: includes/widget.php:154
+msgid "Show author"
+msgstr "Afficher l’auteur"
 
 #: includes/widget.php:168
 msgid "Show source"
@@ -439,35 +472,35 @@ msgstr "Afficher la source"
 msgid "Show vertical line"
 msgstr "Afficher une ligne verticale"
 
-#: includes/admin.php:797 includes/admin.php:1097
+#: includes/admin.php:899 includes/admin.php:1111
 msgid "Source"
 msgstr "Source"
 
-#: includes/admin.php:799 includes/admin.php:1117
+#: includes/admin.php:901 includes/admin.php:1131
 msgid "Status"
 msgstr "Statut"
 
-#: includes/admin.php:975
+#: includes/admin.php:989
 msgid "Tag"
 msgstr "Étiquette"
 
-#: includes/admin.php:967
+#: includes/admin.php:981
 msgid "Tag Management"
 msgstr "Gestion des étiquettes"
 
-#: includes/admin.php:520
+#: includes/admin.php:619
 msgid "Tag removed from all quotations."
 msgstr "Étiquette supprimée de toutes les citations."
 
-#: includes/admin.php:519
+#: includes/admin.php:618
 msgid "Tag renamed throughout the quotation library."
 msgstr "Étiquette renommée dans toute la bibliothèque de citations."
 
-#: includes/admin.php:798 includes/admin.php:1104
+#: includes/admin.php:900 includes/admin.php:1118
 msgid "Tags"
 msgstr "Étiquettes"
 
-#: includes/admin.php:972
+#: includes/admin.php:986
 msgid ""
 "Tags are shared across quotations. Renaming or removing a tag affects every "
 "quotation using it, but never deletes quotations."
@@ -484,7 +517,7 @@ msgstr "Impossible de lire le fichier CSV."
 msgid "The CSV file could not be uploaded."
 msgstr "Impossible de téléverser le fichier CSV."
 
-#: includes/import-export.php:202
+#: includes/import-export.php:204
 msgid "The CSV file is empty."
 msgstr "Le fichier CSV est vide."
 
@@ -492,11 +525,11 @@ msgstr "Le fichier CSV est vide."
 msgid "The CSV file is too large. The maximum size is 5 MB."
 msgstr "Le fichier CSV est trop volumineux. La taille maximale est de 5 Mo."
 
-#: includes/admin.php:75
+#: includes/admin.php:174
 msgid "The quotation cannot be empty."
 msgstr "La citation ne peut pas être vide."
 
-#: includes/admin.php:1125
+#: includes/admin.php:1139
 msgid ""
 "This preview updates as you type. Tags and status are not displayed publicly."
 msgstr ""
@@ -507,11 +540,11 @@ msgstr ""
 msgid "Title:"
 msgstr "Titre :"
 
-#: includes/import-export.php:405
+#: includes/import-export.php:407
 msgid "Welcome to Quotum!"
 msgstr "Bienvenue dans Quotum !"
 
-#: includes/import-export.php:405
+#: includes/import-export.php:407
 msgid ""
 "Would you like to import three sample quotations by Victor Hugo, Dag "
 "Hammarskjöld and Franz Kafka?"
@@ -519,21 +552,23 @@ msgstr ""
 "Souhaitez-vous importer trois citations d’exemple de Victor Hugo, Dag "
 "Hammarskjöld et Franz Kafka ?"
 
-#: includes/admin.php:45 includes/import-export.php:12
-#: includes/import-export.php:158 includes/import-export.php:349
-#: includes/import-export.php:388
+#: includes/import-export.php:12 includes/import-export.php:158
+#: includes/import-export.php:351 includes/import-export.php:390
+#: includes/admin.php:144 includes/admin.php:244 includes/admin.php:287
+#: includes/admin.php:359 includes/admin.php:458
 msgid "You are not allowed to do this."
 msgstr "Vous n’êtes pas autorisé à effectuer cette action."
 
-msgid "Manage Quotes"
-msgstr "Gérer les citations"
+#: includes/import-export.php:444
+msgid "as active"
+msgstr "comme actives"
 
-msgid ""
-"Choose whether imported quotations start inactive, retain their CSV status, "
-"or become active."
-msgstr ""
-"Choisissez si les citations importées doivent être désactivées, conserver "
-"leur statut indiqué dans le fichier CSV ou être activées."
+#: includes/import-export.php:446
+msgid "as inactive"
+msgstr "comme inactives"
+
+#~ msgid "%1$d quotations imported successfully%2$s."
+#~ msgstr "%1$d citations importées avec succès%2$s."
 
 #~ msgid "Quotes Library"
 #~ msgstr "Bibliothèque de citations"

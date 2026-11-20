@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Quotum
  * Description: A simple library for managing and displaying quotations.
- * Version: 0.7.4
+ * Version: 0.7.5
  * Author: Christian Ries
  * Author URI: https://profiles.wordpress.org/christian-ries/
  * Requires at least: 6.2
@@ -14,7 +14,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'QUOTUM_VERSION', '0.7.4' );
+define( 'QUOTUM_VERSION', '0.7.5' );
 define( 'QUOTUM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'QUOTUM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
