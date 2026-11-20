@@ -328,3 +328,10 @@ Development assistance: ChatGPT (OpenAI)
 == Moving from another quotation plugin ==
 
 Quotum is an independent plugin with its own database table and widget. Export quotations from your previous plugin in a compatible CSV format, install Quotum alongside it, and import the CSV using the option to preserve the CSV active status. Replace old widgets and shortcodes with the Quotum widget and `[quotum]` shortcode. Deactivate the older plugin only after verifying the new installation.
+
+== Screenshots ==
+
+1. Manage quotations with search, tag and status filters, bulk actions, and multilingual content.
+2. Add and edit quotations with author attribution, sources, tags, publication status, and a live preview.
+3. Configure the Quotum widget with options for quotation count, author and source display, vertical line, and an interactive Next Quote link.
+4. Display quotations on the frontend with author attribution and an interactive Next Quote link that loads another quotation without reloading the page.
