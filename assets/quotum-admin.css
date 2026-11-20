@@ -1,0 +1,8 @@
+/* Quotum – admin editor */
+#quote { min-height: 10em; line-height: 1.55; }
+#author { min-height: 3.5em; line-height: 1.5; }
+#source { min-height: 4.5em; line-height: 1.5; }
+.quotum-edit-form th { width: 80px !important; padding-top: 18px; padding-right: 10px; }
+.quotum-edit-form td { padding-top: 14px; padding-bottom: 14px; padding-left: 0; }
+.quotum-edit-form .description { max-width: 760px; }
+@media (max-width: 782px) { .quotum-edit-form th { padding-bottom: 6px; } .quotum-edit-form td { padding-top: 6px; } }
