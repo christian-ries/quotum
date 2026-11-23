@@ -4,7 +4,7 @@ Tags: quotations, quotes, shortcode, widget, csv
 Requires at least: 6.2
 Requires PHP: 8.0
 Tested up to: 7.1
-Stable tag: 0.7.5
+Stable tag: 0.7.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -154,6 +154,11 @@ The plugin does not collect analytics or tracking data.
 Administrative actions require the appropriate WordPress capability and nonce verification. User-supplied values are sanitized and database operations use WordPress database APIs.
 
 == Changelog ==
+
+= 0.7.6 =
+* Fix the Next Quote refresh request being blocked by Wordfence username-enumeration protection.
+* Refresh the public JavaScript cache when the script changes.
+
 
 = 0.7.5 =
 * Fix bulk-action confirmation handling and prevent duplicate confirmation dialogs.
