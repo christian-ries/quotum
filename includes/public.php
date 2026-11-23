@@ -14,7 +14,7 @@ function quotum_enqueue_styles() {
 
 /** Load the small public script only where the refresh control is used. */
 function quotum_enqueue_refresh() {
-    wp_enqueue_script( 'quotum-refresh', QUOTUM_PLUGIN_URL . 'assets/quotum-refresh.js', array(), QUOTUM_VERSION, true );
+    wp_enqueue_script( 'quotum-refresh', QUOTUM_PLUGIN_URL . 'assets/quotum-refresh.js', array(), filemtime( QUOTUM_PLUGIN_DIR . 'assets/quotum-refresh.js' ), true );
     wp_add_inline_script( 'quotum-refresh', 'window.quotumRefreshUrl = ' . wp_json_encode( esc_url_raw( rest_url( 'quotum/v1/random' ) ) ) . ';', 'before' );
 }
 
@@ -31,7 +31,7 @@ function quotum_rest_random( WP_REST_Request $request ) {
     global $wpdb;
     $tags = array_slice( array_filter( array_map( 'sanitize_text_field', explode( ',', (string) $request->get_param( 'tags' ) ) ) ), 0, 10 );
     $exclude = absint( $request->get_param( 'exclude' ) );
-    $author = '1' === (string) $request->get_param( 'author' );
+    $author = '1' === (string) $request->get_param( 'show_author' );
     $source = '1' === (string) $request->get_param( 'source' );
     $line = '1' === (string) $request->get_param( 'line' );
     $table = $wpdb->prefix . 'quotum';
