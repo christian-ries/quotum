@@ -7,7 +7,7 @@
         if (!box) return;
         const params = new URLSearchParams({
             exclude: box.dataset.quoteId || '0',
-            author: box.dataset.author || '1',
+            show_author: box.dataset.author || '1',
             source: box.dataset.source || '1',
             line: box.dataset.line || '0',
             tags: box.dataset.tags || ''
