@@ -52,7 +52,7 @@
 
 /* Keep the optional line close to the content, including on mobile and refresh. */
 .quotum-display.quotum-display--line {
-    border-left: 2px solid currentColor;
+    border-left: 2px solid #666;
     padding: 4px 1em 4px 24px;
 }
 .quotum-display--line .quotum-text:last-child {
