@@ -1,0 +1,45 @@
+name: Update WordPress.org Documentation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wordpress-org-deploy
+  cancel-in-progress: false
+
+jobs:
+  documentation:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Synchronize readme only
+        env:
+          SVN_USERNAME: "Christian Ries"
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          stable=$(sed -n 's/^Stable tag: *//p' readme.txt | tr -d '\r')
+          [[ "$stable" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          work=$(mktemp -d)
+          trap 'rm -rf "$work"' EXIT
+          svn checkout --non-interactive --depth empty https://plugins.svn.wordpress.org/quotum/ "$work"
+          svn update --non-interactive --depth files "$work/trunk"
+          svn update --non-interactive --depth empty "$work/tags"
+          svn update --non-interactive --depth files "$work/tags/$stable"
+          test -f "$work/trunk/readme.txt"
+          test -f "$work/tags/$stable/readme.txt"
+          published=$(sed -n 's/^Stable tag: *//p' "$work/trunk/readme.txt" | tr -d '\r')
+          test "$published" = "$stable"
+          cp readme.txt "$work/trunk/readme.txt"
+          cp readme.txt "$work/tags/$stable/readme.txt"
+          svn diff "$work/trunk/readme.txt" "$work/tags/$stable/readme.txt"
+          if [[ -z "$(svn status "$work/trunk/readme.txt" "$work/tags/$stable/readme.txt")" ]]; then
+            echo "Documentation already synchronized."
+            exit 0
+          fi
+          svn commit --non-interactive --no-auth-cache --username "$SVN_USERNAME" --password "$SVN_PASSWORD" -m "Synchronize Quotum documentation ($stable)" "$work/trunk/readme.txt" "$work/tags/$stable/readme.txt"
