@@ -140,16 +140,14 @@ Add custom CSS through Appearance > Customize > Additional CSS, or the equivalen
 
 Example CSS:
 
-```
-.quotum-text { font-size: 1.1em; }
-.quotum-author { font-weight: normal; }
-.quotum-source { font-size: 0.85em; }
-.quotum-display.quotum-display--line {
-    border-left: 2px solid #888;
-    padding-left: 24px;
-}
-.quotum-refresh { font-size: 0.85em; }
-```
+    .quotum-text { font-size: 1.1em; }
+    .quotum-author { font-weight: normal; }
+    .quotum-source { font-size: 0.85em; }
+    .quotum-display.quotum-display--line {
+        border-left: 2px solid #888;
+        padding-left: 24px;
+    }
+    .quotum-refresh { font-size: 0.85em; }
 
 Theme styles may also affect blockquotes, including decorative quotation marks.
 
