@@ -4,7 +4,7 @@ Tags: quotations, quotes, shortcode, widget, csv
 Requires at least: 6.2
 Requires PHP: 8.0
 Tested up to: 7.1
-Stable tag: 0.7.6
+Stable tag: 0.7.7
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,34 +75,30 @@ The examples are not inserted automatically on activation. Importing is additive
 
 == Shortcode ==
 
-The basic shortcode is:
+Use `[quotum]` to display one random active quotation.
 
-`[quotum]`
+= Attribute reference =
 
-By default it displays one random active quotation.
+| Attribute | Explanation |
+| --- | --- |
+| `count` | Number of quotations (1–20). Default: 1. |
+| `tags` | Comma-separated tags; matches at least one tag. Default: all tags. |
+| `show_author` | Display author: yes or no. Default: yes. |
+| `show_source` | Display source: yes or no. Default: yes. |
+| `show_line` | Display vertical line: yes or no. Default: no. |
+| `refresh` | Display Next Quote control: yes or no. Default: no. |
+| `refresh_text` | Custom refresh control text. Default: translated Next quote ». |
 
-Display several quotations:
+Use yes and no for boolean attributes. Legacy values 1 and 0, true and false, and on and off are also accepted, regardless of capitalization. Existing author, source and line attributes remain supported; the corresponding show_ attributes take precedence when both are specified.
 
-`[quotum count="3"]`
+Examples:
 
-Show or hide the author, source and optional vertical line:
+* `[quotum count="3"]`
+* `[quotum show_author="no" show_source="no" show_line="yes"]`
+* `[quotum count="3" tags="philo,hiking" show_line="yes"]`
+* `[quotum refresh="yes" refresh_text="Next quote »"]`
 
-`[quotum author="yes" source="yes" line="yes"]`
-
-Filter by tag:
-
-`[quotum tags="philo"]`
-
-Combine options:
-
-`[quotum count="3" tags="philo" author="yes" source="yes" line="yes"]`
-
-When several tags are supplied, quotations matching at least one of the supplied tags may be selected.
-
-The `count` value is limited to 20 quotations per shortcode.
-
-The optional refresh link is enabled with `[quotum refresh="yes" refresh_text="Next quote »"]`.
-The link loads another active quotation without reloading the page. It is disabled by default.
+The refresh control loads another active quotation without reloading the page.
 
 == Widget ==
 
@@ -126,6 +122,36 @@ Quotum widgets should be created as new widget instances from the **Available Wi
 If you use the **Custom Sidebars** plugin, avoid using its **Clone** function to create additional Quotum widgets. Cloned widget instances may retain or share settings in unexpected ways, especially when combined with language-specific widget visibility.
 
 For multilingual sites using Polylang, create a separate Quotum widget instance for each language and assign the appropriate language through the widget visibility settings.
+
+== Customizing the appearance ==
+
+Add custom CSS through Appearance > Customize > Additional CSS, or the equivalent custom CSS facility in your theme. Do not edit the plugin stylesheet directly, because updates replace it.
+
+| CSS selector | Element |
+| --- | --- |
+| `.quotum-display` | Quotation container |
+| `.quotum-display--line` | Container with optional vertical line |
+| `.quotum-text` | Quotation text (blockquote) |
+| `.quotum-author` | Author attribution |
+| `.quotum-source` | Source attribution |
+| `.quotum-refreshable` | Refreshable quotation wrapper |
+| `.quotum-refresh-content` | Dynamically replaced quotation content |
+| `.quotum-refresh` | Next Quote button |
+
+Example CSS:
+
+```
+.quotum-text { font-size: 1.1em; }
+.quotum-author { font-weight: normal; }
+.quotum-source { font-size: 0.85em; }
+.quotum-display.quotum-display--line {
+    border-left: 2px solid #888;
+    padding-left: 24px;
+}
+.quotum-refresh { font-size: 0.85em; }
+```
+
+Theme styles may also affect blockquotes, including decorative quotation marks.
 
 == Import and Export ==
 
@@ -154,6 +180,11 @@ The plugin does not collect analytics or tracking data.
 Administrative actions require the appropriate WordPress capability and nonce verification. User-supplied values are sanitized and database operations use WordPress database APIs.
 
 == Changelog ==
+
+= 0.7.7 =
+* Improve optional vertical-line spacing and consistency on mobile and refreshable quotations.
+* Add descriptive shortcode display attributes and normalize boolean values while retaining legacy attributes.
+* Document all shortcode attributes and public CSS selectors with examples.
 
 = 0.7.6 =
 * Fix the Next Quote refresh request being blocked by Wordfence username-enumeration protection.
